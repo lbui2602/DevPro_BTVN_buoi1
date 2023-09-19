@@ -27,12 +27,19 @@ public class MainActivity extends AppCompatActivity {
         btnLogin=findViewById(R.id.btnLogin);
         edtUsername=findViewById(R.id.edtTK);
         edtPassword=findViewById(R.id.edtMK);
+        if(PrefManager.getString(this,"username") != null ){
+            Intent intent=new Intent(MainActivity.this, Home.class);
+
+            startActivity(intent);
+        }
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent=new Intent(MainActivity.this, Home.class);
-                String str=edtUsername.getText().toString()+"\nMật khẩu của bạn là: "+edtPassword.getText().toString();
-                intent.putExtra("tk",str);
+//                String str=edtUsername.getText().toString()+"\nMật khẩu của bạn là: "+edtPassword.getText().toString();
+//                intent.putExtra("tk",str);
+                PrefManager.saveString(MainActivity.this,"username",edtUsername.getText().toString());
+                PrefManager.saveString(MainActivity.this,"password",edtPassword.getText().toString());
                 startActivity(intent);
             }
         });

@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:weightSum="10">
 
     <TextView
+        android:layout_weight="0.05"
         android:textColor="@color/black"
         android:textStyle="bold"
         android:textSize="20px"
@@ -17,6 +19,7 @@
         android:layout_height="wrap_content"
         android:text="Login" />
     <TextView
+        android:layout_weight="0.05"
         android:textColor="#5B5B5B"
         android:textSize="20px"
         android:layout_marginLeft="23dp"
@@ -25,12 +28,14 @@
         android:text="Welcome back , Rohit thakur" />
 
     <ImageView
+        android:layout_weight="1.5"
         android:layout_width="153dp"
         android:layout_height="118dp"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
         android:src="@drawable/buoi1" />
     <EditText
+        android:layout_weight="0.3"
         android:id="@+id/edtTK"
         android:layout_marginRight="23dp"
         android:layout_marginTop="100px"
@@ -41,7 +46,7 @@
         android:background="@drawable/custom_edt"
         />
     <EditText
-
+        android:layout_weight="0.3"
         android:layout_marginTop="5dp"
         android:id="@+id/edtMK"
         android:layout_marginRight="23dp"
@@ -53,6 +58,7 @@
         android:background="@drawable/custom_edt"/>
 
     <TextView
+        android:layout_weight="0.05"
         android:textSize="10sp"
         android:id="@+id/tvRegister"
         android:layout_marginRight="23dp"
@@ -60,10 +66,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="You don't have account? Resgiter now"
-        />
+        android:text="You don't have account? Resgiter now" />
 
     <Button
+        android:layout_weight="0.1"
         android:id="@+id/btnLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
